@@ -263,7 +263,14 @@ import static com.prolificinteractive.materialcalendarview.MaterialCalendarView.
     setCustomBackground(facade.getBackgroundDrawable());
     setSelectionDrawable(facade.getSelectionDrawable());
 
-    // Facade has spans
+
+      Integer textColor = facade.getTextColor();
+      if (textColor != null) {
+          setTextColor(facade.getTextColor());
+      }
+
+
+      // Facade has spans
     List<DayViewFacade.Span> spans = facade.getSpans();
     if (!spans.isEmpty()) {
       String label = getLabel();
